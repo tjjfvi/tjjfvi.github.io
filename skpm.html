@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <body style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:white;background-color:#151820"><h1 style="font-size:35px;font-weight:100">01:00</h1><input style="background-color:inherit;border:2px solid white;border-radius:10px;padding:10px 10px;color:white;outline:none"/>
+  <body style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:white;background-color:#151820">
+    <h1 style="font-size:35px;font-weight:100">01:00</h1>
+    <input style="background-color:inherit;border:2px solid white;border-radius:10px;padding:10px 10px;color:white;outline:none"/>
     <script>input=document.querySelector("input");output=document.querySelector("h1");init=()=>{input.value="";time=60;output.innerText="01:00";interval=setInterval(()=>{input.onfocus=()=>{};time--;output.innerText=(time/60|0).toString().padStart(2,0)+":"+(time%60).toString().padStart(2,0);if(!time)fin();},1000)};fin=()=>{input.onfocus=init;clearInterval(interval);output.innerText=(input.value.length/(60-time)*60).toFixed(1) + " SKPM"};input.onfocus=init;</script>
   </body>
 </html>
